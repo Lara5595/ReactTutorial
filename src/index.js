@@ -18,14 +18,27 @@ function Greeting() {
     <h2> We need another div if you want to seperate it from the first</h2>
     {/* In react elements that dont have a closing tag like img and input now your suppose to close em */}
     <input type='text' name="" id="" />
+
+    <div>
+        <br></br>
+        <h2>This is how you call your variable(components) in html</h2>
+        {/* This is how you call your variables in the html */}
+        <Person/>
+        <Message/>
+    </div>
     </React.Fragment>
     );
 }
 
 
-// function Greeting() {
-//     return React.createElement('h2', {}, 'hello world');
-// }
+//  This is arrow function without the return
+const Person = () => <h2>John doe</h2>;
+
+// You can also build it like this
+const Message = () => {
+        return <p>This is my message</p>;
+};
+
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 
